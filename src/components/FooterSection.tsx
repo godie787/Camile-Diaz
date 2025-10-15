@@ -1,17 +1,10 @@
 "use client";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import footerBg from "../../public/images/footerBg.png";
 
 export const FooterSection = () => {
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 80 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      viewport={{ once: true }}
-      className="relative w-full py-20"
-    >
+    <section className="relative w-full py-20">
       <Image
         src={footerBg}
         alt="Fondo Footer"
@@ -53,6 +46,6 @@ export const FooterSection = () => {
           </div>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 };
