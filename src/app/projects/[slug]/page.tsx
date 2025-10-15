@@ -60,18 +60,15 @@ export default async function ProjectDetailPage({ params }: PageProps) {
 
         {/* Imágenes */}
         <div className="space-y-8">
-          {images.map((src, idx) => (
-            <div
-              key={idx}
-              className="rounded-md overflow-hidden relative w-full aspect-[16/9]"
-            >
+          {images.map((img, idx) => (
+            <div key={idx} className="rounded-md overflow-hidden">
               <Image
-                src={src} // p.ej. "/proyectos/uno.jpg" en /public
+                src={img}
                 alt={`${title} - imagen ${idx + 1}`}
-                fill // usamos fill para no requerir width/height fijos
-                sizes="(min-width: 1100px) 1100px, 100vw"
-                className="object-cover"
+                className="w-full h-auto object-cover"
                 priority={idx === 0}
+                sizes="(min-width: 1100px) 1100px, 100vw"
+                placeholder="blur"
               />
             </div>
           ))}
