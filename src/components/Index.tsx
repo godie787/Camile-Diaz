@@ -5,6 +5,7 @@ import section1 from "../../public/images/section1.png";
 import { ProjectsSection2 } from "./ProjectsSection2";
 import { AboutSection } from "./AboutSection";
 import { FooterSection } from "./FooterSection";
+import { motion } from "framer-motion";
 
 export const Index = () => {
   return (
@@ -18,8 +19,14 @@ export const Index = () => {
 
       {/* Contenido principal */}
       <main className="max-w-[1100px] mx-auto px-4 md:px-0 pt-20 md:pt-28">
-        {/* Sección 1 */}
-        <section className="w-full flex items-center justify-center min-h-[55svh] sm:min-h-[65svh] md:min-h-svh mb-4 md:mb-[150px]">
+        {/* Sección 1 - Imagen de portada */}
+        <motion.section
+          initial={{ opacity: 0, y: 80 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="w-full flex items-center justify-center min-h-[55svh] sm:min-h-[65svh] md:min-h-svh mb-4 md:mb-[150px]"
+        >
           <Image
             src={section1}
             alt="ID Camile Díaz"
@@ -28,12 +35,18 @@ export const Index = () => {
             sizes="(min-width: 1100px) 1100px, 100vw"
             placeholder="blur"
           />
-        </section>
+        </motion.section>
 
         {/* Sección 3 - Presentación */}
-        <section className="w-full min-h-[auto] md:min-h-[auto] mb-6 md:mb-[150px]">
+        <motion.section
+          initial={{ opacity: 0, y: 80 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="w-full min-h-[auto] md:min-h-[auto] mb-6 md:mb-[150px]"
+        >
           <AboutSection />
-        </section>
+        </motion.section>
 
         {/* Sección 2 */}
         <section className="w-full min-h-[85svh] md:min-h-svh">
