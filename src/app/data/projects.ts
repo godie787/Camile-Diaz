@@ -4,7 +4,10 @@ import eterna2 from "../../../public/images/eterna/eterna-section3.png";
 import eterna3 from "../../../public/images/eterna/eterna-section4.png";
 
 import chocil1 from "../../../public/images/Choc'il-section2.png";
+import chocil2 from "../../../public/images/chocil/Choc'il-large.png";
+
 import hoodie1 from "../../../public/images/hoodieKimetsu.png";
+import hoodie2 from "../../../public/images/hoodie/hoodieKimetsuLarge.png";
 
 export type Project = {
   slug: string;
@@ -41,7 +44,7 @@ export const projects: Project[] = [
     description:
       "Choc'il: landing con catálogo, realce de producto y módulos de testimonios.",
     cover: chocil1,
-    images: [chocil1],
+    images: [chocil2],
     meta: {
       industry: "Alimentos",
       client: "Emprendimiento local",
@@ -55,7 +58,7 @@ export const projects: Project[] = [
     description:
       "Polerón personalizado inspirado en Kimetsu no Yaiba. Render de prenda y detalles.",
     cover: hoodie1,
-    images: [hoodie1],
+    images: [hoodie2],
     meta: {
       industry: "Indumentaria",
       client: "Pedido personalizado",
