@@ -5,7 +5,7 @@ import { principalColor, secondaryColor, headerTitle } from "@/consts";
 
 export const Header = () => {
   const handleMenuClick = () => {
-    console.log("Abrir menú lateral o toggle...");
+    console.log("Abrir menú lateral...");
   };
 
   return (

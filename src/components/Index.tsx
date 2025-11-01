@@ -25,7 +25,7 @@ export const Index = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="w-full flex items-center justify-center min-h-[55svh] sm:min-h-[65svh] md:min-h-svh mb-4 md:mb-[150px]"
+          className="w-full flex items-center justify-center min-h-[55svh] sm:min-h-[65svh] md:min-h-svh mb-4 ml-4 md:mb-[150px]"
         >
           <Image
             src={section1}
