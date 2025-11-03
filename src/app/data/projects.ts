@@ -9,6 +9,12 @@ import chocil2 from "../../../public/images/chocil/Choc'il-large.png";
 import hoodie1 from "../../../public/images/hoodieKimetsu.png";
 import hoodie2 from "../../../public/images/hoodie/hoodieKimetsuLarge.png";
 
+import catalogoPortada from "../../../public/images/catalogo/portada.png";
+import catalogo1 from "../../../public/images/catalogo/catalogoLarge.png";
+
+import personajePortada from "../../../public/images/personaje/portada.png";
+import personaje1 from "../../../public/images/personaje/personajeLarge.png";
+
 export type Project = {
   slug: string;
   title: string;
@@ -64,6 +70,34 @@ export const projects: Project[] = [
       client: "Pedido personalizado",
       service: "Diseño de prenda",
       date: "2024",
+    },
+  },
+  {
+    slug: "catalogo-de-producto",
+    title: "CATÁLOGO DE PRODUCTOS",
+    description:
+      "Catálogo de productos para marca de ropa. Diseño y maquetación.",
+    cover: catalogoPortada,
+    images: [catalogo1],
+    meta: {
+      industry: "Ropa y moda",
+      client: "Emprendimiento local",
+      service: "Catálogo de productos",
+      date: "2023",
+    },
+  },
+  {
+    slug: "disenio-de-personaje",
+    title: "DISEÑO DE PERSONAJE",
+    description:
+      "Diseño de personaje original para proyecto personal. Creación y desarrollo.",
+    cover: personajePortada,
+    images: [personaje1],
+    meta: {
+      industry: "Ilustración",
+      client: "Proyecto personal",
+      service: "Diseño de personaje",
+      date: "2022",
     },
   },
 ];
