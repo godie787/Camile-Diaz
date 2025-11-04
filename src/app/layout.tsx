@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Camile Díaz - Portafolio",
   description: "Portafolio personal de Camile Díaz",
+  icons: {
+    icon: "/images/system/icono_pagina.png",
+  },
 };
 
 export default function RootLayout({
