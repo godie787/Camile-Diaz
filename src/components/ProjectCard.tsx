@@ -14,12 +14,21 @@ type ProjectCardProps = {
 export const ProjectCard = ({ image, title, link }: ProjectCardProps) => {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
+  const [isHovered, setIsHovered] = useState(false); // Nuevo estado para manejar el hover en móvil
 
   const handleClick = () => {
     if (link) {
       setIsLoading(true);
       setTimeout(() => router.push(link), 400);
     }
+  };
+
+  const handleTouchStart = () => {
+    setIsHovered(true); // Al tocar, se activa el hover
+  };
+
+  const handleTouchEnd = () => {
+    setIsHovered(false); // Al dejar de tocar, se desactiva
   };
 
   return (
@@ -30,11 +39,19 @@ export const ProjectCard = ({ image, title, link }: ProjectCardProps) => {
         tabIndex={0}
         onClick={handleClick}
         onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && handleClick()}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
         aria-label={`Abrir proyecto ${title}`}
       >
         <Image src={image} alt={title} className="w-full h-full object-cover" />
 
-        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div
+          className={`absolute inset-0 ${
+            isHovered ? "opacity-100" : "opacity-0"
+          } transition-opacity duration-300`}
+        >
           <div className="absolute inset-0 bg-black/30" />
           <div className="absolute inset-0 flex flex-col justify-between p-6 text-white">
             <div />
