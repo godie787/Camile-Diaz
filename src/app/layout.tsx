@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "Camile Díaz - Portafolio",
   description: "Portafolio personal de Camile Díaz",
   icons: {
-    icon: "/images/system/icono_pagina.png",
+    icon: "/images/system/icono_pagina.png", // Para usar en el metadata
   },
 };
 
@@ -27,6 +27,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Aquí agregamos el <link> para el favicon */}
+        <link
+          rel="icon"
+          href="/images/system/icono_pagina.png"
+          type="image/png"
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
