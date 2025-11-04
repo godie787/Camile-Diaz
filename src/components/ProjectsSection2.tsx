@@ -2,8 +2,19 @@
 import { motion } from "framer-motion";
 import { ProjectCard } from "./ProjectCard";
 import { projects } from "@/app/data/projects";
+import { useState } from "react";
 
 export const ProjectsSection2 = () => {
+  const [selectedCard, setSelectedCard] = useState<number | null>(null); 
+
+  const handleSelectCard = (index: number) => {
+    if (selectedCard === index) {
+      setSelectedCard(null);
+    } else {
+      setSelectedCard(index); 
+    }
+  };
+
   return (
     <motion.section
       initial={{ opacity: 0, y: 80 }}
@@ -17,12 +28,15 @@ export const ProjectsSection2 = () => {
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6">
-        {projects.map((p) => (
+        {projects.map((p, index) => (
           <ProjectCard
             key={p.slug}
+            index={index} 
             image={p.cover}
             title={p.title}
             link={`/projects/${p.slug}`}
+            onSelectCard={handleSelectCard}
+            selectedCard={selectedCard || -1}
           />
         ))}
       </div>

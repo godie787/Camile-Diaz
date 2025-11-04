@@ -2,19 +2,29 @@
 import Image, { StaticImageData } from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { LoadingOverlay } from "./shared/LoadingOverlay";
 
 type ProjectCardProps = {
   image: StaticImageData;
   title: string;
   link?: string;
+  index: number;
+  onSelectCard: (index: number) => void;
+  selectedCard: number;
 };
 
-export const ProjectCard = ({ image, title, link }: ProjectCardProps) => {
+export const ProjectCard = ({
+  image,
+  title,
+  link,
+  index,
+  onSelectCard,
+  selectedCard,
+}: ProjectCardProps) => {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
-  const [isHovered, setIsHovered] = useState(false); // Nuevo estado para manejar el hover en móvil
+  const [isHovered, setIsHovered] = useState(false);
 
   const handleClick = () => {
     if (link) {
@@ -24,12 +34,23 @@ export const ProjectCard = ({ image, title, link }: ProjectCardProps) => {
   };
 
   const handleTouchStart = () => {
-    setIsHovered(true); // Al tocar, se activa el hover
+    onSelectCard(index);
+    setIsHovered(true);
   };
 
   const handleTouchEnd = () => {
-    setIsHovered(false); // Al dejar de tocar, se desactiva
+    if (selectedCard !== index) {
+      setIsHovered(false);
+    }
   };
+
+  useEffect(() => {
+    if (selectedCard === index) {
+      setIsHovered(true);
+    } else {
+      setIsHovered(false);
+    }
+  }, [selectedCard, index]);
 
   return (
     <>

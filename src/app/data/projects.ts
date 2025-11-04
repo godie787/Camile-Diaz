@@ -22,10 +22,10 @@ export type Project = {
   cover: StaticImageData;
   images: StaticImageData[];
   meta: {
-    industry: string; // Industria
-    client: string; // Cliente
-    service: string; // Servicio
-    date: string; // Fecha
+    industry: string; 
+    client: string;
+    service: string;
+    date: string;
   };
 };
 
