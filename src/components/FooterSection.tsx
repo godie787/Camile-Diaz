@@ -66,7 +66,7 @@ export const FooterSection = () => {
           <p className="text-sm md:text-base">
             Sitio web creado por{" "}
             <a
-              href="https://www.linkedin.com/in/diego-jorquera"
+              href="https://www.linkedin.com/in/diego-jorquera-sanchez/"
               className="text-gray-800 hover:underline"
               target="_blank"
               rel="noopener noreferrer"
