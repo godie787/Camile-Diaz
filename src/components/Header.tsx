@@ -22,13 +22,13 @@ export const Header = () => {
         {headerTitle}
       </Link>
 
-      <Menu
+      {/* <Menu
         size={32}
         strokeWidth={2}
         onClick={handleMenuClick}
         className="cursor-pointer hover:opacity-80 transition"
         color={secondaryColor}
-      />
+      /> */}
     </header>
   );
 };
