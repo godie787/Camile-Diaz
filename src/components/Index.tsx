@@ -2,6 +2,7 @@
 import { Header } from "./Header";
 import Image from "next/image";
 import section1 from "../../public/images/section1.png";
+
 import { ProjectsSection2 } from "./ProjectsSection2";
 import { AboutSection } from "./AboutSection";
 import { FooterSection } from "./FooterSection";
@@ -47,6 +48,22 @@ export const Index = () => {
         >
           <AboutSection />
         </motion.section>
+        {/* 
+        <motion.section
+          initial={{ opacity: 0, y: 80 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="w-full min-h-[auto] md:min-h-[auto] mb-6 md:mb-[150px]"
+        >
+          <div className="relative w-full h-auto">
+            <img
+              src="/images/gif_section.gif"
+              alt="Descripción del gif"
+              className="w-full h-auto rounded-md"
+            />
+          </div>
+        </motion.section> */}
 
         {/* Sección 2 */}
         <section className="w-full min-h-[85svh] md:min-h-svh">
