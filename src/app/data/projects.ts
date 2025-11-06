@@ -15,6 +15,9 @@ import catalogo1 from "../../../public/images/catalogo/catalogoLarge.png";
 import personajePortada from "../../../public/images/personaje/portada.png";
 import personaje1 from "../../../public/images/personaje/personajeLarge.png";
 
+import libretaPortada from "../../../public/images/libreta/portada.png";
+import libreta1 from "../../../public/images/libreta/imagen1.jpg";
+
 export type Project = {
   slug: string;
   title: string;
@@ -22,7 +25,7 @@ export type Project = {
   cover: StaticImageData;
   images: StaticImageData[];
   meta: {
-    industry: string; 
+    industry: string;
     client: string;
     service: string;
     date: string;
@@ -102,6 +105,19 @@ Incluyó desarrollo de bocetos, modelado y render final.`,
       client: "Proyecto personal",
       service: "Diseño conceptual y modelado 3D",
       date: "Octubre 2024",
+    },
+  },
+  {
+    slug: "libreta",
+    title: "Libreta Patrimonial",
+    description: `Diseño, confección y realización del Taller Patrimonial de Stickers en el Museo de Concón. El proyecto incluyó el desarrollo del material complementario y la dirección del taller “Stickers con temática patrimonial: Batalla de Concón”, enfocado a público infantil.`,
+    cover: libretaPortada,
+    images: [libreta1],
+    meta: {
+      industry: "Editorial, ilustración",
+      client: "Museo de Concón",
+      service: "Diseño gráfico",
+      date: "Mayo 2024",
     },
   },
 ];
