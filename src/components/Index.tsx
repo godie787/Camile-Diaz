@@ -6,6 +6,7 @@ import section1 from "../../public/images/section1.png";
 import { ProjectsSection2 } from "./ProjectsSection2";
 import { AboutSection } from "./AboutSection";
 import { FooterSection } from "./FooterSection";
+import { SoftwareSection } from "../components/SoftwareSection"; // Importamos el componente
 import { motion } from "framer-motion";
 
 export const Index = () => {
@@ -20,7 +21,7 @@ export const Index = () => {
 
       {/* Contenido principal */}
       <main className="max-w-[1100px] mx-auto px-4 md:px-0 pt-20 md:pt-28">
-        {/* Sección 1 - Imagen de portada */}
+        {/* Sección de Presentación */}
         <motion.section
           initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -37,8 +38,7 @@ export const Index = () => {
             placeholder="blur"
           />
         </motion.section>
-
-        {/* Sección 3 - Presentación */}
+        {/* Sección de Acerca de */}
         <motion.section
           initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -48,24 +48,11 @@ export const Index = () => {
         >
           <AboutSection />
         </motion.section>
-        {/* 
-        <motion.section
-          initial={{ opacity: 0, y: 80 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="w-full min-h-[auto] md:min-h-[auto] mb-6 md:mb-[150px]"
-        >
-          <div className="relative w-full h-auto">
-            <img
-              src="/images/gif_section.gif"
-              alt="Descripción del gif"
-              className="w-full h-auto rounded-md"
-            />
-          </div>
-        </motion.section> */}
 
-        {/* Sección 2 */}
+        {/* Sección de Software */}
+        <SoftwareSection />
+
+        {/* Sección de Proyectos */}
         <section className="w-full min-h-[85svh] md:min-h-svh">
           <ProjectsSection2 />
         </section>
