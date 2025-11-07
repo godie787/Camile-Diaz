@@ -1,12 +1,12 @@
 import { StaticImageData } from "next/image";
-import eterna1 from "../../../public/images/eterna/eterna-section2.png";
+import eterna1 from "../../../public/images/eterna/eterna-section2.jpg";
 import eterna2 from "../../../public/images/eterna/eterna-section3.png";
 import eterna3 from "../../../public/images/eterna/eterna-section4.png";
 
-import chocil1 from "../../../public/images/Choc'il-section2.png";
+import chocil1 from "../../../public/images/chocil/Choc'il-section2.png";
 import chocil2 from "../../../public/images/chocil/Choc'il-large.png";
 
-import hoodie1 from "../../../public/images/hoodieKimetsu.png";
+import hoodie1 from "../../../public/images/hoodie/hoodieKimetsu.png";
 import hoodie2 from "../../../public/images/hoodie/hoodieKimetsuLarge.png";
 
 import catalogoPortada from "../../../public/images/catalogo/portada.png";
@@ -17,6 +17,9 @@ import personaje1 from "../../../public/images/personaje/personajeLarge.png";
 
 import libretaPortada from "../../../public/images/libreta/portada.png";
 import libreta1 from "../../../public/images/libreta/imagen1.jpg";
+
+import tattoosPortada from "../../../public/images/tattos/portada.png";
+import tattoos1 from "../../../public/images/tattos/imagen1.png";
 
 export type Project = {
   slug: string;
@@ -118,6 +121,19 @@ Incluyó desarrollo de bocetos, modelado y render final.`,
       client: "Museo de Concón",
       service: "Diseño gráfico",
       date: "Mayo 2024",
+    },
+  },
+  {
+    slug: "tattoos",
+    title: "Tatuajes",
+    description: `Diseños personalizados y de autor para tatuajes, desarrollados con enfoque artístico y conceptual.`,
+    cover: tattoosPortada,
+    images: [tattoos1],
+    meta: {
+      industry: "Tatuajes, ilustración",
+      client: "Clientes varios",
+      service: "Diseño de tatuajes",
+      date: "2024 - Presente",
     },
   },
 ];
