@@ -59,9 +59,10 @@ export const SoftwareSection = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
-      className="w-full flex flex-wrap justify-center gap-6 my-8 md:my-60"
+      className="w-full flex justify-center items-center my-8 md:my-60"
     >
-      {softwareItems.map((software, index) => (
+      {/* Código anterior comentado - mostrar iconos individuales */}
+      {/* {softwareItems.map((software, index) => (
         <div key={index} className="relative group">
           <Image
             src={software.src}
@@ -71,7 +72,16 @@ export const SoftwareSection = () => {
             height={100}
           />
         </div>
-      ))}
+      ))} */}
+
+      {/* Nuevo código - mostrar gif */}
+      <div className="w-full flex justify-center px-4">
+        <img
+          src="/images/gif_section.gif"
+          alt="Software que utilizo"
+          className="w-full max-w-[1000px] h-auto rounded-md"
+        />
+      </div>
     </motion.section>
   );
 };

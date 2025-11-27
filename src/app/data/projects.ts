@@ -66,18 +66,16 @@ La marca presenta tres variedades: Xock'il con leche, Xock'il Original 85% y Xoc
     },
   },
   {
-    slug: "hoodie-kimetsu-no-yaiba",
-    title: "Hoodie Kimetsu no Yaiba",
-    description: `Diseño de polerón personalizado inspirado en el universo de *Kimetsu no Yaiba* (Luna Superior). 
-El proyecto incluyó la conceptualización gráfica, renderizado del producto, diseño de etiqueta y empaque. 
-La propuesta se ejecutó en una mezcla textil 60% algodón y 40% poliéster, con impresión en papel transfer inkjet.`,
-    cover: hoodie1,
-    images: [hoodie2],
+    slug: "libreta",
+    title: "Libreta Patrimonial",
+    description: `Diseño, confección y realización del Taller Patrimonial de Stickers en el Museo de Concón. El proyecto incluyó el desarrollo del material complementario y la dirección del taller “Stickers con temática patrimonial: Batalla de Concón”, enfocado a público infantil.`,
+    cover: libretaPortada,
+    images: [libreta1],
     meta: {
-      industry: "Moda y confección",
-      client: "Encargo personalizado",
-      service: "Diseño textil y dirección de arte",
-      date: "Octubre 2025",
+      industry: "Editorial, ilustración",
+      client: "Museo de Concón",
+      service: "Diseño gráfico",
+      date: "Mayo 2024",
     },
   },
   {
@@ -96,31 +94,18 @@ El resultado equilibra la estética editorial con la identidad artesanal de la a
     },
   },
   {
-    slug: "disenio-de-personaje",
-    title: "Diseño de Personaje",
-    description: `Proyecto personal de ilustración y modelado 3D. 
-Consistió en el diseño conceptual de un personaje infantil con temática “fiesta en la piscina”, explorando color, forma y expresión para transmitir frescura y alegría. 
-Incluyó desarrollo de bocetos, modelado y render final.`,
-    cover: personajePortada,
-    images: [personaje1],
+    slug: "hoodie-kimetsu-no-yaiba",
+    title: "Hoodie Kimetsu no Yaiba",
+    description: `Diseño de polerón personalizado inspirado en el universo de *Kimetsu no Yaiba* (Luna Superior). 
+El proyecto incluyó la conceptualización gráfica, renderizado del producto, diseño de etiqueta y empaque. 
+La propuesta se ejecutó en una mezcla textil 60% algodón y 40% poliéster, con impresión en papel transfer inkjet.`,
+    cover: hoodie1,
+    images: [hoodie2],
     meta: {
-      industry: "Animación y modelado 3D",
-      client: "Proyecto personal",
-      service: "Diseño conceptual y modelado 3D",
-      date: "Octubre 2024",
-    },
-  },
-  {
-    slug: "libreta",
-    title: "Libreta Patrimonial",
-    description: `Diseño, confección y realización del Taller Patrimonial de Stickers en el Museo de Concón. El proyecto incluyó el desarrollo del material complementario y la dirección del taller “Stickers con temática patrimonial: Batalla de Concón”, enfocado a público infantil.`,
-    cover: libretaPortada,
-    images: [libreta1],
-    meta: {
-      industry: "Editorial, ilustración",
-      client: "Museo de Concón",
-      service: "Diseño gráfico",
-      date: "Mayo 2024",
+      industry: "Moda y confección",
+      client: "Encargo personalizado",
+      service: "Diseño textil y dirección de arte",
+      date: "Octubre 2025",
     },
   },
   {
@@ -134,6 +119,21 @@ Incluyó desarrollo de bocetos, modelado y render final.`,
       client: "Clientes varios",
       service: "Diseño de tatuajes",
       date: "2024 - Presente",
+    },
+  },
+  {
+    slug: "disenio-de-personaje",
+    title: "Diseño de Personaje",
+    description: `Proyecto personal de ilustración y modelado 3D. 
+Consistió en el diseño conceptual de un personaje infantil con temática “fiesta en la piscina”, explorando color, forma y expresión para transmitir frescura y alegría. 
+Incluyó desarrollo de bocetos, modelado y render final.`,
+    cover: personajePortada,
+    images: [personaje1],
+    meta: {
+      industry: "Animación y modelado 3D",
+      client: "Proyecto personal",
+      service: "Diseño conceptual y modelado 3D",
+      date: "Octubre 2024",
     },
   },
 ];
