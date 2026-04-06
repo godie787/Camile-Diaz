@@ -21,10 +21,9 @@ export const AboutSection = () => {
           style={{ color: secondaryColor }}
         >
           <span className="text-white font-semibold">
-            Hi!! me llamo Camile, soy estudiante <br /> de diseño,{" "}
+            Hola, soy Camile, Diseñadora Gráfica.<br />{" "}
           </span>
-          expreso mi creatividad en <br /> lo visual. Crear me hace feliz por lo que <br />
-          busco plasmar una parte de mi <br /> esencia en cada proyecto :)
+          Expreso mi creatividad a través<br /> del lenguaje visual y me apasiona crear proyectos con sentido. Busco plasmar una parte de mi esencia en cada trabajo <br></br>que desarrollo. <br />
         </p>
       </div>
     </motion.section>
