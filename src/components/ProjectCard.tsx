@@ -8,7 +8,9 @@ import { LoadingOverlay } from "./shared/LoadingOverlay";
 type ProjectCardProps = {
   image: StaticImageData;
   title: string;
+  hoverLabel?: string;
   link?: string;
+  external?: boolean;
   index: number;
   onSelectCard: (index: number) => void;
   selectedCard: number;
@@ -17,7 +19,9 @@ type ProjectCardProps = {
 export const ProjectCard = ({
   image,
   title,
+  hoverLabel,
   link,
+  external = false,
   index,
   onSelectCard,
   selectedCard,
@@ -29,7 +33,14 @@ export const ProjectCard = ({
   const handleClick = () => {
     if (link) {
       setIsLoading(true);
-      setTimeout(() => router.push(link), 400);
+      setTimeout(() => {
+        if (external) {
+          window.location.href = link;
+          return;
+        }
+
+        router.push(link);
+      }, 400);
     }
   };
 
@@ -77,7 +88,12 @@ export const ProjectCard = ({
           <div className="absolute inset-0 flex flex-col justify-between p-6 text-white">
             <div />
             <div className="flex items-center justify-between">
-              <span className="text-lg font-semibold">{title}</span>
+              <div>
+                <span className="text-lg font-semibold">{title}</span>
+                {hoverLabel ? (
+                  <div className="text-sm text-white/80">{hoverLabel}</div>
+                ) : null}
+              </div>
               <div className="w-10 h-10 bg-white/30 hover:bg-white/40 transition rounded-md grid place-items-center">
                 <ArrowUpRight size={24} className="text-white" />
               </div>

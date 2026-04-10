@@ -31,10 +31,12 @@ export const ProjectsSection2 = () => {
         {projects.map((p, index) => (
           <ProjectCard
             key={p.slug}
-            index={index} 
+            index={index}
             image={p.cover}
             title={p.title}
-            link={`/projects/${p.slug}`}
+            hoverLabel={p.hoverLabel}
+            link={p.externalUrl ?? `/projects/${p.slug}`}
+            external={Boolean(p.externalUrl)}
             onSelectCard={handleSelectCard}
             selectedCard={selectedCard || -1}
           />

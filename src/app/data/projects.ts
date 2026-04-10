@@ -20,6 +20,7 @@ import libreta1 from "../../../public/images/libreta/imagen1.jpg";
 
 import tattoosPortada from "../../../public/images/tattos/portada.png";
 import tattoos1 from "../../../public/images/tattos/imagen1.png";
+import ncgPortada from "../../../public/images/ncg/portada NCG.png";
 
 export type Project = {
   slug: string;
@@ -27,6 +28,8 @@ export type Project = {
   description: string;
   cover: StaticImageData;
   images: StaticImageData[];
+  hoverLabel?: string;
+  externalUrl?: string;
   meta: {
     industry: string;
     client: string;
@@ -106,6 +109,22 @@ La propuesta se ejecutó en una mezcla textil 60% algodón y 40% poliéster, con
       client: "Encargo personalizado",
       service: "Diseño textil y dirección de arte",
       date: "Octubre 2025",
+    },
+  },
+  {
+    slug: "ncg",
+    title: "NCG",
+    description:
+      "Proyecto desarrollado para New Capital Group. Esta tarjeta redirige directamente al sitio externo del proyecto.",
+    cover: ncgPortada,
+    images: [],
+    hoverLabel: "(new capital group)",
+    externalUrl: "https://prtfolioaudiovisual.framer.website/",
+    meta: {
+      industry: "Audiovisual y marca",
+      client: "New Capital Group",
+      service: "Portafolio audiovisual",
+      date: "2025",
     },
   },
   {
