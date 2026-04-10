@@ -113,12 +113,11 @@ La propuesta se ejecutó en una mezcla textil 60% algodón y 40% poliéster, con
   },
   {
     slug: "ncg",
-    title: "NCG",
+    title: "New Capital Group",
     description:
       "Proyecto desarrollado para New Capital Group. Esta tarjeta redirige directamente al sitio externo del proyecto.",
     cover: ncgPortada,
     images: [],
-    hoverLabel: "(new capital group)",
     externalUrl: "https://prtfolioaudiovisual.framer.website/",
     meta: {
       industry: "Audiovisual y marca",
