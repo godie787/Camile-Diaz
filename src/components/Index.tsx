@@ -6,7 +6,7 @@ import section1 from "../../public/images/section1.png";
 import { ProjectsSection2 } from "./ProjectsSection2";
 import { AboutSection } from "./AboutSection";
 import { FooterSection } from "./FooterSection";
-import { SoftwareSection } from "../components/SoftwareSection"; // Importamos el componente
+import { SoftwareSection } from "../components/SoftwareSection";
 import { motion } from "framer-motion";
 
 export const Index = () => {
@@ -29,15 +29,26 @@ export const Index = () => {
           viewport={{ once: true }}
           className="w-full flex items-center justify-center min-h-[55svh] sm:min-h-[65svh] md:min-h-svh mb-4 ml-4 md:mb-[150px]"
         >
-          <Image
-            src={section1}
-            alt="ID Camile Díaz"
-            className="w-full h-auto rounded-md"
-            priority
-            sizes="(min-width: 1100px) 1100px, 100vw"
-            placeholder="blur"
-          />
+          <motion.div
+            animate={{ rotate: [-2, 0, -2] }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="w-full origin-center"
+          >
+            <Image
+              src={section1}
+              alt="ID Camile Díaz"
+              className="w-full h-auto rounded-md"
+              priority
+              sizes="(min-width: 1100px) 1100px, 100vw"
+              placeholder="blur"
+            />
+          </motion.div>
         </motion.section>
+
         {/* Sección de Acerca de */}
         <motion.section
           initial={{ opacity: 0, y: 80 }}
