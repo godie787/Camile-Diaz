@@ -4,23 +4,38 @@ import { ProjectCard } from "./ProjectCard";
 import { projects } from "@/app/data/projects";
 import { useState } from "react";
 
-const cardTransforms = [
-  "md:rotate-[-7deg] md:translate-x-6 md:translate-y-2",
-  "md:rotate-[7deg] md:-translate-x-6 md:translate-y-10",
-  "md:rotate-[-7deg] md:translate-x-10 md:-translate-y-10",
-  "md:rotate-[7deg] md:-translate-x-8 md:-translate-y-2",
-];
+const getCardTransform = (index: number) => {
+  const row = Math.floor(index / 2);
+  const isLeft = index % 2 === 0;
+
+  const rotation = isLeft
+    ? "sm:rotate-[-5deg] md:rotate-[-7deg]"
+    : "sm:rotate-[5deg] md:rotate-[7deg]";
+  const horizontal = isLeft
+    ? "sm:translate-x-3 md:translate-x-6"
+    : "sm:-translate-x-3 md:-translate-x-6";
+
+  // Esto sí cierra el hueco real entre filas
+  const overlapByRow =
+    row === 0
+      ? ""
+      : row === 1
+        ? "sm:-mt-8 md:-mt-10"
+        : row === 2
+          ? "sm:-mt-12 md:-mt-14"
+          : row === 3
+            ? "sm:-mt-16 md:-mt-18"
+            : "sm:-mt-20 md:-mt-22";
+
+  return `${rotation} ${horizontal} ${overlapByRow}`;
+};
 
 export const ProjectsSection2 = () => {
   const [selectedCard, setSelectedCard] = useState<number | null>(null);
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   const handleSelectCard = (index: number) => {
-    if (selectedCard === index) {
-      setSelectedCard(null);
-    } else {
-      setSelectedCard(index);
-    }
+    setSelectedCard(selectedCard === index ? null : index);
   };
 
   const handleHoverCard = (index: number | null) => {
@@ -39,7 +54,7 @@ export const ProjectsSection2 = () => {
         Proyectos
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 md:gap-0 overflow-visible">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-0 overflow-visible">
         {projects.map((p, index) => (
           <ProjectCard
             key={p.slug}
@@ -53,7 +68,7 @@ export const ProjectsSection2 = () => {
             onHoverCard={handleHoverCard}
             selectedCard={selectedCard ?? -1}
             hoveredCard={hoveredCard ?? -1}
-            className={cardTransforms[index % cardTransforms.length]}
+            className={getCardTransform(index)}
           />
         ))}
       </div>

@@ -21,6 +21,7 @@ import libreta1 from "../../../public/images/libreta/imagen1.jpg";
 import tattoosPortada from "../../../public/images/tattos/portada.png";
 import tattoos1 from "../../../public/images/tattos/imagen1.png";
 import ncgPortada from "../../../public/images/ncg/portada NCG.png";
+import uxuiPortada from "../../../public/images/uxui/portadauxui.png";
 
 export type Project = {
   slug: string;
@@ -123,6 +124,21 @@ La propuesta se ejecutó en una mezcla textil 60% algodón y 40% poliéster, con
       industry: "Audiovisual y marca",
       client: "New Capital Group",
       service: "Portafolio audiovisual",
+      date: "2025",
+    },
+  },
+  {
+    slug: "ux-ui",
+    title: "UX / UI",
+    description:
+      "Proyecto UX/UI con redirección directa al sitio externo del portafolio.",
+    cover: uxuiPortada,
+    images: [],
+    externalUrl: "https://prtfolioaudiovisual.framer.website/ux-ui",
+    meta: {
+      industry: "UX/UI y diseño digital",
+      client: "Proyecto externo",
+      service: "Diseño UX/UI",
       date: "2025",
     },
   },
